@@ -6,12 +6,14 @@ defineProps({
 
 <template>
   <div>
-    <img
-      src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+    <img :src="game.thumbnail"
     />
-    <h2>Заголовок</h2>
-    <p>Просто собака</p>
-    {{ game }}
+    <h2>{{ game.title }}</h2>
+    <p>{{ game.short_description }}</p>
+    <h3>Платформа: {{ game.platform }}</h3>
+    <h3>Релиз: {{ game.release_date }}</h3>
+
+    <a target= "_blank" :href="game.freetogame_profile_url">Ссылка</a>
   </div>
 </template>
 
@@ -30,13 +32,23 @@ div {
 img {
   aspect-ratio: 16/9;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 h2 {
   color: black;
   font-size: 36px;
+  margin-bottom: 10px;
 }
 p {
   color: black;
-  font-size: 36px;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+a {
+  color:black;
+  font-size: 40px;
+  background: red;
+  margin-top: auto;
+  border-radius:12px;
 }
 </style>

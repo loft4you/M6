@@ -13,11 +13,6 @@ onBeforeMount(async () => {
     <h1>Fantasy</h1>
     <div class="block">
       <Card v-for="(item, index) in games" :key="index" :game="item" />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
     </div>
   </section>
 </template>
