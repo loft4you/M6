@@ -1,0 +1,1 @@
+auto close tag, auto rename tag, live preview, live server,Prettier,Vetur
